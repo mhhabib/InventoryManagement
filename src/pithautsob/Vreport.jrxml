@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="668829b7-44b2-4982-ae9d-9194520e34ef">
+	<property name="ireport.zoom" value="1.464100000000018"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="faa8099e-0d8c-45f4-a766-680a2312e367"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["H:\\PithaUtsob\\src\\pithautsob\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     totalprice.`PithaName` AS totalprice_PithaName,
+     totalprice.`Price` AS totalprice_Price,
+     totalprice.`Quantity` AS totalprice_Quantity,
+     totalprice.`Total` AS totalprice_Total
+FROM
+     `totalprice` totalprice]]>
+	</queryString>
+	<field name="totalprice_PithaName" class="java.lang.String"/>
+	<field name="totalprice_Price" class="java.lang.Integer"/>
+	<field name="totalprice_Quantity" class="java.lang.Integer"/>
+	<field name="totalprice_Total" class="java.lang.Integer"/>
+	<variable name="totalprice_PithaName_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{totalprice_PithaName}]]></variableExpression>
+	</variable>
+	<variable name="totalprice_Total_1" class="java.lang.Integer" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{totalprice_Total}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="106" splitType="Stretch">
+			<line>
+				<reportElement x="-15" y="103" width="585" height="1" uuid="8c517794-8a6a-4665-850f-2d1ce8404559"/>
+			</line>
+			<line>
+				<reportElement x="-15" y="100" width="585" height="1" uuid="36142aa8-27b4-445d-bbe9-1e18ab317366"/>
+			</line>
+			<staticText>
+				<reportElement x="89" y="8" width="339" height="27" uuid="3c6e6c6a-749c-4c82-b58c-861d9924e7e7"/>
+				<textElement textAlignment="Left">
+					<font fontName="Consolas" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PITHA FESTIVAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="31" width="339" height="20" uuid="8e3890f3-0dda-4dbf-ae0f-d1f01f33960d"/>
+				<textElement textAlignment="Left">
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[Dept of Computer Science & Engineering]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="48" width="349" height="20" uuid="944a1b0c-ee6b-4c0b-8ab6-d5f06ae5ed75"/>
+				<textElement textAlignment="Left">
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[Jessore University of Science & Technology]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="64" width="327" height="22" uuid="107cde5e-d9ce-40c1-8147-89acfc916351"/>
+				<textElement textAlignment="Left">
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[Jessore-7408]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="-15" y="81" width="585" height="20" forecolor="#009999" backcolor="#009999" uuid="758ac280-23f3-46cf-90e7-06e3aa9c1c4d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-15" y="0" width="100" height="88" forecolor="#009999" backcolor="#009999" uuid="72bff419-7638-4d1d-8d90-5e84cd54a143"/>
+			</rectangle>
+			<image>
+				<reportElement x="-6" y="2" width="92" height="81" uuid="5f5bbbd5-1514-424a-8984-661dbb0f2448"/>
+				<imageExpression><![CDATA["H:\\PithaUtsob\\src\\image\\logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="356" y="3" width="85" height="15" uuid="9d371059-2f7c-4213-923c-a05469aebb2b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="81" y="-25" width="373" height="20" forecolor="#FFFFFF" uuid="47876e97-9847-4380-a3d6-9f12ed1697e4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[MONEY RECEIPT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="2" width="100" height="15" uuid="1eeb70b1-ff53-44ee-adf7-7045b052cdf4"/>
+				<text><![CDATA[Mr. Omok Ali]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="68" y="8" width="125" height="20" uuid="cdea1100-e94b-4d29-baa2-5e23aead50dd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="193" y="8" width="87" height="20" uuid="568962f6-6c47-477e-a0ea-8a9e9ad16f25"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="280" y="8" width="76" height="20" uuid="8eb29877-c7cc-450b-9a3f-9753e39e9666"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="68" y="12" width="125" height="15" uuid="b4141384-8aff-4358-a07e-18091d32c7f7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PITHA NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="12" width="87" height="15" uuid="8bf96c79-2512-4630-a37d-2ab07e0506da"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="12" width="76" height="16" uuid="793c15cb-2507-4cc5-be87-b09de5f574f4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUANTITY]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="356" y="8" width="85" height="20" uuid="155b8d8c-1e65-4dda-b478-45d678ebc3bf"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="356" y="12" width="85" height="16" uuid="869a0868-82a3-493b-b92c-3ba6d2ac9fe3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="68" y="2" width="125" height="18" uuid="09fbb04d-5671-4ef8-b1da-89f9756f0471"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="193" y="2" width="87" height="18" uuid="91bb461b-9994-41cb-8064-b8efcf55315c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="280" y="2" width="76" height="18" uuid="49b0cc0e-72c3-43f7-aec5-b4720122e7e1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="356" y="2" width="85" height="18" uuid="0084f80b-1275-44f1-a0eb-e068802426af"/>
+			</rectangle>
+			<textField>
+				<reportElement x="68" y="5" width="125" height="15" uuid="733189e2-68bf-4e30-8abd-4fcf3fff4275"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalprice_PithaName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="5" width="87" height="15" uuid="943042dd-3d6e-4545-9cbf-b4e39ef42de7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalprice_Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="5" width="76" height="15" uuid="29b6cfe2-d515-46be-bd24-d3022b5935fb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalprice_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="5" width="85" height="15" uuid="2ddaf453-05a7-4bdd-8fc8-d6f37382e475"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalprice_Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="88" splitType="Stretch">
+			<break>
+				<reportElement x="0" y="49" width="100" height="1" uuid="092305fc-8975-4e8e-9945-2dc1c6ed8d41"/>
+			</break>
+			<elementGroup/>
+			<subreport>
+				<reportElement x="55" y="36" width="441" height="13" uuid="c35c5634-2062-49c7-a7f6-272f69f879c8"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Vreport_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="77" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="46" splitType="Stretch"/>
+	</summary>
+</jasperReport>

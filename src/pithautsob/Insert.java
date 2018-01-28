@@ -190,13 +190,16 @@ public class Insert extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, ex);
         }
          showTableData();
+         serial.setText("");
+         pithaName.setText("");
+         price.setText("");
     }//GEN-LAST:event_deleteBTNActionPerformed
 
     private void insertBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertBTNActionPerformed
         // TODO add your handling code here:
         try{
             String sql="INSERT INTO pithavalue"
-                    +"(pithaname, price) "
+                    +"(PithaName, price) "
                     +"VALUES (?,?)";
             conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/pitha","root","");
             ps=conn.prepareStatement(sql);
@@ -208,11 +211,14 @@ public class Insert extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, ex);
         }
         showTableData();
+        serial.setText("");
+        pithaName.setText("");
+        price.setText("");
     }//GEN-LAST:event_insertBTNActionPerformed
 
     private void mainFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainFrameActionPerformed
         // TODO add your handling code here:
-        new MainFrame().setVisible(true);
+        new NewJFrame().setVisible(true);
         dispose();
     }//GEN-LAST:event_mainFrameActionPerformed
 
@@ -231,6 +237,9 @@ public class Insert extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, ex);
         }
         showTableData();
+        serial.setText("");
+        pithaName.setText("");
+        price.setText("");
     }//GEN-LAST:event_updateBTNActionPerformed
 
     private void adminTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adminTableMouseClicked
