@@ -49,7 +49,6 @@ public class NewJFrame extends javax.swing.JFrame {
     public void showYear()
     {
         int year;
-        String yes;
         GregorianCalendar gcalendar = new GregorianCalendar();
         year = gcalendar.get(Calendar.YEAR);
         
@@ -238,7 +237,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel7.setText("DEPARTMENT OF COMPUTER SCIENCE & ENINGINEERING, JUST");
+        jLabel7.setText("DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING, JUST");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 740, 30));
 
         jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 51, 0), 4, true));
@@ -356,13 +355,12 @@ public class NewJFrame extends javax.swing.JFrame {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/pitha","root","");
-            String rp="H:\\PithaUtsob\\src\\pithautsob\\Vreport.jrxml";
+            String rp="H:\\Java project\\Java swing\\PithaUtsob\\src\\pithautsob\\voucher.jrxml";
             JasperReport jr=JasperCompileManager.compileReport(rp);
             JasperPrint jp=JasperFillManager.fillReport(jr,null,conn);
             JasperViewer.viewReport(jp);
             conn.close();
-            
-            
+                 
         }catch(Exception ex)
         {
              System.out.println(ex.getMessage());
